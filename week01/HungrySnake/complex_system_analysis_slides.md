@@ -1,3 +1,8 @@
+--- 
+marp: true 
+theme: uncover
+---
+
 # PyLottery：複雜系統視角下的程式設計分析
 
 ---
