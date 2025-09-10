@@ -97,11 +97,13 @@ while cy > exit_y:
 exit_pos = (exit_x, exit_y)
 
 # ---------------- Controls ----------------
+# https://www.pygame.org/docs/ref/key.html
 directions = {
     pygame.K_KP8:(0,-1), pygame.K_KP2:(0,1),
     pygame.K_KP4:(-1,0), pygame.K_KP6:(1,0),
     pygame.K_KP7:(-1,-1), pygame.K_KP9:(1,-1),
-    pygame.K_KP1:(-1,1), pygame.K_KP3:(1,1)
+    pygame.K_KP1:(-1,1), pygame.K_KP3:(1,1),
+    pygame.K_j:(-1,0), pygame.K_l:(1,0),
 }
 
 # ---------------- Drawing ----------------
@@ -210,6 +212,6 @@ while running:
 
     # --- Game over handling ---
     if game_over:
-        show_center_message("全村沒希望！", duration=3, fade=False)
+        show_center_message("嗚…全村沒希望！", duration=3, fade=False)
         pygame.quit()
         sys.exit()
