@@ -1,26 +1,44 @@
-# 混沌理論 (Chaos Theory)
-## 授課簡報
+# 混沌理論與語言學
+#### (Chaos Theory and linguistics)
+
 
 ---
 
+<div style="text-align: left;margin-left: 15% ">
 
-**今日學習目標：**
+**學習目標：**  
+
 - 理解混沌理論的基本概念
 - 掌握混沌系統的特徵
-- 探討混沌理論的實際應用
 - 認識著名的混沌現象
+- 以混沌理論探討人類語言和語言學
+</div>
 
 ---
 
 ### 什麼是混沌理論？
+
+<div style="text-align: left;margin-left: 15% ">
+
 **混沌理論 (Chaos Theory)**
-
+    
 混沌理論是研究動力系統中**看似隨機但實際具有確定性規律的現象**的數學分支 (有沒有突然覺得，這和語言系統一樣？)
+</div>
 
+---
+
+<div style="text-align: left;margin-left: 15% ">
+    
 **核心概念：**
+    
 - 確定性系統中的非週期性行為
 - 對初始條件的極端敏感依賴
 - 看似隨機但遵循特定規律的複雜行為
+</div>
+
+---
+
+<div style="text-align: left;margin-left: 15% ">
 
 **歷史背景：**
 - 1960年代由氣象學家 Edward Lorenz 首先發現
@@ -32,10 +50,14 @@
 - **現代發展：**
     - 非線性動力學的深入研究
     - 複雜系統科學的興起
+</div>
 
 ---
 
 ### 混沌系統的三大特徵
+
+<div style="text-align: left;margin-left: 15% ">
+
 **混沌系統的定義特徵**
 
 **1. 對初始條件的敏感依賴性**
@@ -49,30 +71,45 @@
 **3. 週期軌道的稠密性**
 - 存在無窮多個不穩定的週期軌道
 - 這些軌道在吸引子中稠密分佈
+</div>
 
 ---
 
 ### 蝴蝶效應 (Butterfly Effect)
-**對初始條件的敏感依賴性**
 
-**概念說明：**
+**概念說明：對初始條件的敏感依賴性**
 「在巴西的一隻蝴蝶扇動翅膀，可能在德克薩斯州引起龍捲風」
 
+---
+
+### 蝴蝶效應 (Butterfly Effect)
+<div style="text-align: left;margin-left: 15% ">
+
 **數學表達：**
+</div>
+
 - 初始條件差異：δx₀
 - 時間 t 後的差異：δx(t) ≈ δx₀ × e^(λt)
 - λ > 0 為 Lyapunov 指數
 
+---
+
+### 蝴蝶效應 (Butterfly Effect)
+<div style="text-align: left;margin-left: 15% ">
+
 **實際意義：**
+</div>
+
 - 即使是確定性系統，長期預測仍然困難
 - 解釋了天氣預報準確度的限制
 - 強調了觀測精度的重要性
 
 ---
 
-### Excel 中的亂數
-Excel 中的亂數產生方法
+### Excel 中的亂數 01
 
+Excel 中的亂數產生方法
+<div style="text-align: left;margin-left: 15% ">
 1. RAND() 函數
 功能： 產生 0 到 1 之間的隨機小數
 
@@ -80,29 +117,38 @@ Excel 中的亂數產生方法
 結果範圍：0 ≤ 結果 < 1
 每次重新計算工作表時會產生新的隨機數
 範例結果：0.394827, 0.751203, 0.286491
+</div>
 
+---
+
+### Excel 中的亂數 02
+<div style="text-align: left;margin-left: 15% ">    
 2. RANDBETWEEN() 函數
 功能： 產生指定範圍內的隨機整數
 
 =RANDBETWEEN(最小值, 最大值)
 範例：=RANDBETWEEN(1, 100) 產生 1 到 100 的整數
 範例：=RANDBETWEEN(-10, 10) 產生 -10 到 10 的整數
+</div>
 
 ---
 
 ### Excel 中的亂數是真的亂數嗎？
-
+<div style="text-align: left;margin-left: 15% ">
 Excel 的隨機數是「偽隨機數」，由數學演算法產生
 每次開啟檔案或重新計算時，隨機數會改變
 如需真正的隨機性，應使用外部隨機數產生器
 大量隨機數產生可能影響工作表效能
 
-演算法背景：
+**演算法背景：**
 Excel 使用線性同餘產生器 (Linear Congruential Generator) 產生偽隨機數列，具有良好的統計特性但存在週期性。
+</div>
 
 ---
 
 ### 分岔理論 (Bifurcation Theory)
+<div style="text-align: left;margin-left: 15% ">
+
 **系統行為改變的關鍵點**
 
 **分岔定義：**
@@ -116,50 +162,28 @@ Excel 使用線性同餘產生器 (Linear Congruential Generator) 產生偽隨�
 
 **數學描述：**
 分岔參數 r 的臨界值 r_c，系統在此點改變行為模式
-
----
-
-### 邏輯映射 (Logistic Map)
-**一維混沌系統的典型例子**
-
-**數學形式：**
-x_{n+1} = rx_n(1 - x_n)
-
-**參數分析：**
-- 0 < r ≤ 1：x → 0
-- 1 < r ≤ 3：x → (r-1)/r
-- 3 < r < 3.57：週期振盪
-- r > 3.57：混沌行為
-
-**應用背景：**
-- 人口動力學模型
-- 生態系統研究
-- 經濟學模型
+</div>
 
 ---
 
 ### 生物學中的混沌
-**生命系統的複雜動力學**
+<div style="text-align: left;margin-left: 15% ">    
 
 **人口動力學：**
 - 捕食者-獵物模型
 - 競爭物種模型
 - 流行病傳播模型
 
-**心臟動力學：**
-- 心律不整的混沌特性
-- ECG 信號分析
-- 心房顫動機制
-
 **神經系統：**
 - 神經元放電模式
 - 腦波的混沌特性
 - 癲癇發作機制
+</div>
 
 ---
 
-### 經濟學中的混沌
-**經濟系統的非線性行為**
+### 經濟學中的混沌：經濟系統的非線性行為
+<div style="text-align: left;margin-left: 15% ">
 
 **金融市場：**
 - 股價波動的混沌特性
@@ -175,10 +199,12 @@ x_{n+1} = rx_n(1 - x_n)
 - 風險管理模型
 - 投資組合優化
 - 市場預測限制
+</div>
 
 ---
 
 ### 氣象學中的混沌
+<div style="text-align: left;margin-left: 15% ">
 **天氣系統的複雜性**
 
 **大氣動力學：**
@@ -195,45 +221,77 @@ x_{n+1} = rx_n(1 - x_n)
 - 長期氣候趨勢
 - 極端天氣事件
 - 臨界點(Tipping Points)
+</div>
 
 ---
 
-### 混沌理論與語言學
+### 混沌理論與語言學01
+<div style="text-align: left;margin-left: 15% ">
 **Chaos Theory and Linguistics**
 
 **語言系統的複雜性特徵：**
 - 語言作為動力系統的觀點
 - 非線性語言變化過程
 - 語言演化的不可預測性
+</div>
 
+---
+
+### 混沌理論與語言學02
+<div style="text-align: left;margin-left: 15% ">
+    
 **研究領域概覽：**
 - 語言習得中的混沌現象
 - 語言變遷的動力學模型
 - 語音系統的非線性動態
 - 句法結構的複雜性理論
+</div>
+
+---
+
+### 混沌理論與語言學03
+<div style="text-align: left;margin-left: 15% ">
 
 **跨學科意義：**
 - 認知科學與複雜系統的結合
 - 語言普遍性的新視角
+</div>
+
 
 ---
 
-### 語言習得的混沌動力學
-**Language Acquisition as Chaotic Process**
 
-**傳統理論 vs 混沌觀點：**
+### 語言習得的混沌動力學01
+<div style="text-align: left;margin-left: 15% ">
+
+**Language Acquisition as Chaotic Process**
 - **線性觀點：** 階段性、漸進式習得
 - **混沌觀點：** 突現性、非線性發展
+</div>
+
+
+---    
+
+
+### 語言習得的混沌動力學02
+<div style="text-align: left;margin-left: 15% ">
 
 **混沌特徵在語言習得中的表現：**
 - **敏感依賴性：** 微小輸入差異導致不同習得路徑
 - **非週期性：** 語言發展的個體差異
 - **自組織：** 語法規則的自發形成
+</div>
+
+---    
+
+### 語言習得的混沌動力學03
+<div style="text-align: left;margin-left: 15% ">
 
 **實證研究：**
 - 兒童語言爆發期的突現現象
 - 詞彙習得的非線性增長
 - 語音發展的關鍵期效應
+</div>
 
 ---
 
@@ -507,6 +565,8 @@ x_{n+1} = rx_n(1 - x_n)
 ---
 
 ### 思考與討論
+<div style="text-align: left;margin-left: 15% ">
+
 **Homework: 請挑兩個問題，分享你的想法。**
 
 **概念性問題：**
@@ -516,7 +576,6 @@ x_{n+1} = rx_n(1 - x_n)
 
 
 **未來研究方向：**
-- 多語言社會的複雜系統分析
-- 人工智慧語言模型的動力學特性
-
----
+- 試以複雜系統為基礎，提出一個多語言社會的現象分析
+- 試以複雜系統為基礎，分析人工智慧大型語言模型的動力學特性
+</div>
