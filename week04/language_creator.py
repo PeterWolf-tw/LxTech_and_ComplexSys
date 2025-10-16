@@ -7,8 +7,8 @@ from collections import defaultdict
 @dataclass
 class PhonologySystem:
     """音韻系統"""
-    consonants: Set[str] = field(default_factory=lambda: {'p', 'b', 't', 'd', 'k', 'g', 'm', 'n', 's', 'z', 'l', 'r'})
-    vowels: Set[str] = field(default_factory=lambda: {'a', 'e', 'i', 'o', 'u'})
+    consonants: Set[str] = field(default_factory=lambda: {'p', 'b', 't', 'd', 'k', 'g', 'm', 'n', 's', 'sh', 'lr', 'l', 'r'})
+    vowels: Set[str] = field(default_factory=lambda: {'a', 'e', 'i', 'o', 'ay'})
     syllable_patterns: List[str] = field(default_factory=lambda: ['CVCVCVCV', 'CV', 'CVCV', 'V', 'CVCVCV', 'CVCVCVCVCV', 'CVV'])
     phonotactic_rules: List[str] = field(default_factory=list)
 
@@ -254,6 +254,7 @@ class LanguageCreatorGame:
         print("1. SVO (主語-動詞-賓語) - 如英文、中文")
         print("2. SOV (主語-賓語-動詞) - 如日文、韓文")
         print("3. VSO (動詞-主語-賓語) - 如愛爾蘭語、南島語")
+        print("4. VOS (動詞-賓語-主語) - 如…God knows...")
 
         order_choice = input("請選擇 (1-3)：") or "1"
 
@@ -263,6 +264,8 @@ class LanguageCreatorGame:
             self.syntax.word_order = "SOV"
         elif order_choice == "3":
             self.syntax.word_order = "VSO"
+        elif order_choice == "4":
+            self.syntax.word_order = "VOS"
 
         print(f"已設定語序：{self.syntax.word_order}")
 
