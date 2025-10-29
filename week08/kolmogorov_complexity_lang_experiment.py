@@ -14,7 +14,7 @@ class KolmogorovComplexity:
     使用壓縮演算法來近似 Kolmogorov Complexity
     """
 
-    @staticmethod
+
     def compress_length(text: str, method: str = 'zlib') -> int:
         """
         計算文本壓縮後的長度
@@ -39,7 +39,7 @@ class KolmogorovComplexity:
 
         return len(compressed)
 
-    @staticmethod
+
     def kolmogorov_complexity(text: str, method: str = 'zlib') -> float:
         """
         計算文本的 Kolmogorov Complexity 近似值
@@ -53,7 +53,7 @@ class KolmogorovComplexity:
         """
         return KolmogorovComplexity.compress_length(text, method)
 
-    @staticmethod
+
     def normalized_compression_distance(text1: str, text2: str, method: str = 'zlib') -> float:
         """
         計算兩個文本之間的標準化壓縮距離 (NCD)
@@ -76,7 +76,7 @@ class KolmogorovComplexity:
         ncd = (c_xy - min(c_x, c_y)) / max(c_x, c_y)
         return ncd
 
-    @staticmethod
+
     def compression_ratio(text: str, method: str = 'zlib') -> float:
         """
         計算壓縮率
@@ -92,7 +92,7 @@ class KolmogorovComplexity:
         compressed_size = KolmogorovComplexity.compress_length(text, method)
         return compressed_size / original_size if original_size > 0 else 0
 
-    @staticmethod
+
     def is_human_like(text: str, method: str = 'zlib') -> Dict[str, Union[float, bool, str]]:
         """
         判斷文本是否像人類語言
@@ -149,7 +149,7 @@ class KolmogorovComplexity:
             'reason': reason
         }
 
-    @staticmethod
+
     def analyze_text_type(text: str, method: str = 'zlib') -> str:
         """
         分析文本類型
