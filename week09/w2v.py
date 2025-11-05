@@ -4,8 +4,9 @@
 import fasttext
 import fasttext.util
 
-def main():
+def ref():
     """"""
+    print("https://fasttext.cc/docs/en/crawl-vectors.html")
     return None
 
 
