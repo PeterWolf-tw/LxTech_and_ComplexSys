@@ -1,6 +1,7 @@
 # Semantic Computing
 ## Semantics in Natural Language Processing
 
+ref. https://wisconsin.pressbooks.pub/naturallanguage/chapter/semantics/
 ---
 
 ### 什麼是語意分析?
